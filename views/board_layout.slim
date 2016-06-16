@@ -1,0 +1,13 @@
+div class="board ui-board"
+	style
+		== @styles unless !defined? @styles
+	div class="title"
+		= @name
+	div class="area #{@name}-container" style="background: #{defined?(@bg_colour) ? @bg_colour : 'white'}"
+		- if defined? @elements
+			== @elements
+		- else
+			div class="#{@name} shape"
+
+	textarea class="code ui-code"
+		= @styles unless !defined? @styles

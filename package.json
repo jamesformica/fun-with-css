@@ -1,0 +1,13 @@
+{
+  "name": "application",
+  "version": "1.0.0",
+  "description": "i should probably change this",
+  "dependencies": {
+    "typescript": "^1.8.10"
+  },
+  "scripts": {
+    "build": "tsc -p ./app/assets/typescript --outDir ./app/assets/javascripts"
+  },
+  "repository": {},
+  "author": "James Formica"
+}

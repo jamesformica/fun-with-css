@@ -1,0 +1,107 @@
+- @name = "turtle"
+
+- @bg_colour = 'white'
+
+- @elements = 	"<div class='tu-head'>"\
+				"	<div class='tu-eye'></div>"\
+			  	"</div>"\
+			  	"<div class='tu-body'>"\
+			  	"	<div class='tu-foot-1'></div>"\
+			  	"	<div class='tu-foot-2'></div>"\
+			  	"	<div class='tu-tail'></div>"\
+			  	"</div>"\
+			  	"<div class='tu-shell'></div>"
+
+- @styles = ".tu-body {\n"\
+			"  position: absolute;\n"\
+			"  top: 50%;\n"\
+			"  left: calc(50% - 70px);\n"\
+			"  width: 140px;\n"\
+			"  height: 30px;\n"\
+			"  background: linear-gradient(#86CF4D, #517F2E);\n"\
+			"}\n\n"\
+			".tu-foot-1, .tu-foot-2 {\n"\
+			"  position: absolute;\n"\
+			"  top: 30px;\n"\
+			"  width: 30px;\n"\
+			"  height: 20px;\n"\
+			"  background: linear-gradient(to right, #639C39, #3E6324);\n"\
+			"}\n\n"\
+			".tu-foot-1 {\n"\
+			"  left: 5px;\n"\
+			"}\n\n"\
+			".tu-foot-2 {\n"\
+			"  right: 5px;\n"\
+			"}\n\n"\
+			".tu-tail {\n"\
+			"  position: absolute;\n"\
+			"  top: 0;\n"\
+			"  right: -45px;\n"\
+			"  width: 0;\n"\
+			"  height: 0;\n"\
+			"  border: 15px solid transparent;\n"\
+			"  border-left: 30px solid #639C39;\n"\
+			"}\n\n"\
+			".tu-shell {\n"\
+			"  position: absolute;\n"\
+			"  top: calc(50% - 70px);\n"\
+			"  left: calc(50% - 70px);\n"\
+			"  width: 140px;\n"\
+			"  height: 70px;\n"\
+			"  border-radius: 70px 70px 0 0;\n"\
+			"  background: repeating-radial-gradient(#CCB920, #948516 20%);\n"\
+			"}\n\n"\
+			".tu-head {\n"\
+			"  position: absolute;\n"\
+			"  top: calc(50% - 5px);\n"\
+			"  left: calc(50% - 120px);\n"\
+			"  width: 60px;\n"\
+			"  height: 40px;\n"\
+			"  border-radius: 50%;\n"\
+			"  background: linear-gradient(#86CF4D, #517F2E);\n"\
+			"  z-index: 3;\n"\
+			"}\n\n"\
+			".tu-eye {\n"\
+			"  position: absolute;\n"\
+			"  top: 5px;\n"\
+			"  left: 10px;\n"\
+			"  width: 20px;\n"\
+			"  height: 20px;\n"\
+			"  border-radius: 50%;\n"\
+			"  background: white;\n"\
+			"  z-index: 4;\n"\
+			"}\n\n"\
+			".tu-eye:after {\n"\
+			"  content: '';\n"\
+			"  position: absolute;\n"\
+			"  top: calc(50% - 3px);\n"\
+			"  width: 6px;\n"\
+			"  height: 6px;\n"\
+			"  border-radius: 50%;\n"\
+			"  background: black;\n"\
+			"}\n\n"\
+			".turtle-container:hover .tu-foot-1, .turtle-container:hover .tu-foot-2 {\n"\
+			"  animation-name: swing;\n"\
+			"  animation-duration: 2.5s;\n"\
+			"  animation-iteration-count: infinite;\n"\
+			"  animation-timing-function: linear;\n"\
+			"}\n\n"\
+			".turtle-container:hover .tu-foot-2 {"\
+			"  animation-delay: 1s;"\
+			"}\n\n"\
+			".turtle-container:hover .tu-head {"\
+			"  animation-name: bob;\n"\
+			"  animation-duration: 2.5s;\n"\
+			"  animation-iteration-count: infinite;\n"\
+			"  animation-timing-function: linear;\n"\
+			"}\n\n"\
+			"@keyframes swing {\n"\
+			"  25% {transform: translateY(-10px); }\n"\
+			"  50% {transform: translateY(-10px) translateX(-10px); }\n"\
+			"  75% {transform: translateY(0) translateX(-10px); }\n"\
+			"  100% {transform: translateY(0) translateX(0); }\n"\
+			"}\n\n"\
+			"@keyframes bob {\n"\
+			"  50% {transform: translateX(-10px); }\n"\
+			"  100% {transform: translateX(0); }\n"\
+			"}"

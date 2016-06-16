@@ -1,0 +1,33 @@
+- @name = "card"
+
+- @bg_colour = 'lightgray'
+
+- @elements = "<div class='#{@name} shape'><div class='image'></div><span class='info'>Damian Slothington<span class='desc'>Loves short walks on the beach and sleeping constantly.</span></span></div>"
+
+- @styles = ".card {\n"\
+			"  width: 200px;\n"\
+			"  height: 300px;\n"\
+			"  font-size: 16px;\n"\
+			"  text-align: left;\n"\
+			"  background: white;\n"\
+			"  box-shadow: 2px 2px 4px rgba(0,0,0,0.4);\n"\
+			"}\n\n"\
+			".image {\n"\
+			"  width: 200px;\n"\
+			"  height: 200px;\n"\
+			"  background-image: url('/sloth-astro.jpeg');\n"\
+			"  background-position: center;\n"\
+			"  background-size: cover;\n"\
+			"}\n\n"\
+			".info {\n"\
+			"  padding: 10px;\n"\
+			"  display: inline-block;\n"\
+			"}\n\n"\
+			".desc {\n"\
+			"  display: block;\n"\
+			"  margin-top: 10px;\n"\
+			"  font-size: 12px;\n"\
+			"}\n\n"\
+			".image:hover {\n"\
+			"  background-image: url('/damian.jpg');\n"\
+			"}"

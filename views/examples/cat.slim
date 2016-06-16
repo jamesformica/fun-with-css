@@ -1,0 +1,156 @@
+- @name = "cat"
+
+- @bg_colour = 'white'
+
+- @elements = 	"<div class='cat-head'>"\
+				"	<div class='cat-ear-1'></div>"\
+				"	<div class='cat-ear-2'></div>"\
+				"	<div class='cat-eye-1'></div>"\
+				"	<div class='cat-eye-2'></div>"\
+				"	<div class='cat-mouth'></div>"\
+			  	"</div>"\
+			  	"<div class='cat-body'>"\
+			  	"	<div class='cat-paw-1'></div>"\
+			  	"	<div class='cat-paw-2'></div>"\
+			  	"	<div class='cat-foot-1'></div>"\
+			  	"	<div class='cat-foot-2'></div>"\
+			  	"	<div class='cat-tail'></div>"\
+			  	"</div>"
+
+- @styles = ".cat-body {\n"\
+			"  position: absolute;\n"\
+			"  top: 50%;\n"\
+			"  left: calc(50% - 70px);\n"\
+			"  width: 140px;\n"\
+			"  height: 140px;\n"\
+			"  border-radius: 50%;\n"\
+			"  background: radial-gradient(#E6A42A 10%, #996D1C 80%);\n"\
+			"  z-index: 1;\n"\
+			"}\n\n"\
+			".cat-head {\n"\
+			"  position: absolute;\n"\
+			"  top: calc(50% - 65px);\n"\
+			"  left: calc(50% - 45px);\n"\
+			"  width: 90px;\n"\
+			"  height: 90px;\n"\
+			"  border-radius: 50%;\n"\
+			"  background: radial-gradient(#E6A42A, #A4741C 80%);\n"\
+			"  z-index: 2;\n"\
+			"}\n\n"\
+			".cat-foot-1, .cat-foot-2 {\n"\
+			"  position: absolute;\n"\
+			"  bottom: 0;\n"\
+			"  width: 30px;\n"\
+			"  height: 15px;\n"\
+			"  border-radius: 0 0 15px 15px;\n"\
+			"  background: linear-gradient(#E6A42A, black);\n"\
+			"  z-index: 3;\n"\
+			"}\n\n"\
+			".cat-foot-1 {\n"\
+			"  transform: rotate(35deg);\n"\
+			"  left: 12px;\n"\
+			"}\n\n"\
+			".cat-foot-2 {\n"\
+			"  transform: rotate(-35deg);\n"\
+			"  right: 12px;\n"\
+			"}\n\n"\
+			".cat-paw-1, .cat-paw-2 {\n"\
+			"  position: absolute;\n"\
+			"  top: 50%;\n"\
+			"  width: 30px;\n"\
+			"  height: 15px;\n"\
+			"  border-radius: 0 0 15px 15px;\n"\
+			"  background: linear-gradient(#E6A42A, black);\n"\
+			"  z-index: 3;\n"\
+			"}\n\n"\
+			".cat-paw-1 {\n"\
+			"  left: 20px;\n"\
+			"}\n\n"\
+			".cat-paw-2 {\n"\
+			"  right: 20px;\n"\
+			"}\n\n"\
+			".cat-eye-1, .cat-eye-2 {\n"\
+			"  position: absolute;\n"\
+			"  top: 30%;\n"\
+			"  width: 20px;\n"\
+			"  height: 20px;\n"\
+			"  border-radius: 50%;\n"\
+			"  background: white;\n"\
+			"  z-index: 4;\n"\
+			"}\n\n"\
+			".cat-eye-1:after, .cat-eye-2:after {\n"\
+			"  content: '';\n"\
+			"  position: absolute;\n"\
+			"  top: calc(50% - 3px);\n"\
+			"  width: 6px;\n"\
+			"  height: 6px;\n"\
+			"  border-radius: 50%;\n"\
+			"  background: black;\n"\
+			"}\n\n"\
+			".cat-eye-1 {\n"\
+			"  left: 20px;\n"\
+			"}\n\n"\
+			".cat-eye-2 {\n"\
+			"  right: 20px;\n"\
+			"}\n\n"\
+			".cat-ear-1, .cat-ear-2 {\n"\
+			"  position: absolute;\n"\
+			"  top: -22px;\n"\
+			"  width: 0;\n"\
+			"  height: 0;\n"\
+			"  border: 15px solid transparent;\n"\
+			"  border-bottom-color: #6A4A12;\n"\
+			"  border-bottom-width: 20px;\n"\
+			"  z-index: 4;\n"\
+			"}\n\n"\
+			".cat-ear-1 {\n"\
+			"  left: -4px;\n"\
+			"  transform: rotate(-35deg);\n"\
+			"}\n\n"\
+			".cat-ear-2 {\n"\
+			"  right: -4px;\n"\
+			"  transform: rotate(35deg);\n"\
+			"}\n\n"\
+			".cat-mouth {\n"\
+			"  position: absolute;\n"\
+			"  top: 65%;\n"\
+			"  left: 45%;\n"\
+			"  width: 20px;\n"\
+			"  height: 1px;\n"\
+			"  background: black;\n"\
+			"}\n\n"\
+			".cat-mouth:after {\n"\
+			"  content: '';\n"\
+			"  position: absolute;\n"\
+			"  top: 1px;\n"\
+			"  left: 2px;\n"\
+			"  width: 15px;\n"\
+			"  height: 20px;\n"\
+			"  background: #FF15CE;\n"\
+			"  border-radius: 0 0 15px 15px;\n"\
+			"}\n\n"\
+			".cat-tail {\n"\
+			"  position: absolute;\n"\
+			"  top: 50%;\n"\
+			"  left: 90%;\n"\
+			"  width: 80px;\n"\
+			"  height: 15px;\n"\
+			"  background: linear-gradient(#D69829, #A1731E);\n"\
+			"  border-radius: 0 15px 15px 0;\n"\
+			"  transform: rotate(-35deg);\n"\
+			"  transform-origin: 0 0;\n"\
+			"  z-index: -1;\n"\
+			"}\n\n"\
+			"@keyframes shake {\n"\
+			"  0% {transform: rotate(0deg); }\n"\
+			"  25% {transform: rotate(40deg) scale(1.2); }\n"\
+			"  75% {transform: rotate(-70deg) scale(0.8); }\n"\
+			"  100% {transform: rotate(0deg); }\n"\
+			"}\n\n"\
+			".cat-container:hover .cat-head {\n"\
+			"  animation-name: shake;\n"\
+			"  animation-duration: 1.5s;\n"\
+			"  animation-iteration-count: infinite;\n"\
+			"  animation-timing-function: linear;\n"\
+			"}"
+

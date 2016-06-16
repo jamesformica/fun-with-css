@@ -1,0 +1,117 @@
+- @name = "flamingo"
+
+- @bg_colour = 'white'
+
+- @elements = 	"<div class='fl-upper'>"\
+				"	<div class='fl-neck'></div>"\
+				"	<div class='fl-head'>"\
+				"		<div class='fl-eye'></div>"\	
+				"</div>"\
+				"	<div class='fl-beak'></div>"\
+			  	"</div>"\
+			  	"<div class='fl-body'>"\
+			  	"	<div class='fl-leg-1'></div>"\
+			  	"	<div class='fl-leg-2-1'></div>"\
+			  	"	<div class='fl-leg-2-2'></div>"\
+			  	"</div>"
+
+- @styles = ".fl-body {\n"\
+			"  position: absolute;\n"\
+			"  top: 50%;\n"\
+			"  left: calc(50% - 60px);\n"\
+			"  width: 120px;\n"\
+			"  height: 60px;\n"\
+			"  border-radius: 60px 60px 0 0;\n"\
+			"  background: radial-gradient(#E655B3 10%, #B5428D 80%);\n"\
+			"}\n\n"\
+			".fl-upper {\n"\
+			"  position: absolute;\n"\
+			"  top: 80px;\n"\
+			"  left: 70px;\n"\
+			"  width: 80px;\n"\
+			"  height: 178px;\n"\
+			"}\n\n"\
+			".fl-neck {\n"\
+			"  position: absolute;\n"\
+			"  top: 0;\n"\
+			"  right: 15px;\n"\
+			"  width: 6px;\n"\
+			"  height: 100%;\n"\
+			"  background: linear-gradient(to right, #E655B3, #B5428D 80%);\n"\
+			"}\n\n"\
+			".fl-head {\n"\
+			"  position: absolute;\n"\
+			"  top: 0;\n"\
+			"  right: 0px;\n"\
+			"  width: 40px;\n"\
+			"  height: 40px;\n"\
+			"  border-radius: 50%;\n"\
+			"  background: radial-gradient(#E655B3 10%, #B5428D 80%);\n"\
+			"  z-index: 2;\n"\
+			"}\n\n"\
+			".fl-eye {\n"\
+			"  position: absolute;\n"\
+			"  top: 20%;\n"\
+			"  left: 20%;\n"\
+			"  width: 20px;\n"\
+			"  height: 20px;\n"\
+			"  border-radius: 50%;\n"\
+			"  background: white;\n"\
+			"  z-index: 4;\n"\
+			"}\n\n"\
+			".fl-eye:after {\n"\
+			"  content: '';\n"\
+			"  position: absolute;\n"\
+			"  top: calc(50% - 3px);\n"\
+			"  left: 5px;\n"\
+			"  width: 6px;\n"\
+			"  height: 6px;\n"\
+			"  border-radius: 50%;\n"\
+			"  background: black;\n"\
+			"}\n\n"\
+			".fl-beak {\n"\
+			"  position: absolute;\n"\
+			"  top: 10px;\n"\
+			"  left: 10px;\n"\
+			"  width: 40px;\n"\
+			"  height: 20px;\n"\
+			"  border-radius: 40px 0 0 0;\n"\
+			"  background: black;\n"\
+			"  z-index: 1;\n"\
+			"}\n\n"\
+			".fl-leg-1 {\n"\
+			"  position: absolute;\n"\
+			"  top: 60px;\n"\
+			"  left: 50%;\n"\
+			"  width: 4px;\n"\
+			"  height: 120px;\n"\
+			"  background: black;\n"\
+			"}\n\n"\
+			".fl-leg-2-1 {\n"\
+			"  position: absolute;\n"\
+			"  top: 60px;\n"\
+			"  left: 50%;\n"\
+			"  width: 4px;\n"\
+			"  height: 60px;\n"\
+			"  background: black;\n"\
+			"  transform: rotate(25deg);\n"\
+			"  transform-origin: 0 0;\n"\
+			"}\n\n"\
+			".fl-leg-2-2 {\n"\
+			"  position: absolute;\n"\
+			"  top: 112px;\n"\
+			"  left: calc(50% - 25px);\n"\
+			"  width: 60px;\n"\
+			"  height: 4px;\n"\
+			"  background: black;\n"\
+			"}\n\n"\
+			"@keyframes spin {\n"\
+			"  from {transform: rotate(0deg); transform-origin: 80% 100%; }\n"\
+			"  to {transform: rotate(-360deg); transform-origin: 80% 100%; }\n"\
+			"}\n\n"\
+			".flamingo-container:hover .fl-upper {\n"\
+			"  animation-name: spin;\n"\
+			"  animation-duration: 0.5s;\n"\
+			"  animation-iteration-count: infinite;\n"\
+			"}"
+

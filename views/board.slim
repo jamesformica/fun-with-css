@@ -1,0 +1,15 @@
+- colour = ["crimson", "purple", "orange", "teal", "cornflowerblue", "yellow", "black"].sample
+
+div class="board ui-board"
+	style
+	div class="title"
+		= name
+	div class="area"
+		div class="#{name} shape"
+
+		div class="hint"
+			= "Clue: #{hint}..." unless !defined? hint
+	textarea class="code ui-code"
+		= ".#{name} {\n"
+		= "  background: #{colour};\n"
+		= "}"

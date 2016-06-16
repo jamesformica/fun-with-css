@@ -1,0 +1,39 @@
+- @name = "banner"
+
+- @bg_colour = 'white'
+
+- @elements = "<div class='page'><div class='banner'>This looks cool!</div></div>"
+
+- @styles = ".page {\n"\
+			"  position: absolute;\n"\
+			"  top: 0;\n"\
+			"  left: 60px;\n"\
+			"  width: 200px;\n"\
+			"  height: 100%;\n"\
+			"  background: lightgray;\n"\
+			"  border-left: 1px solid black;\n"\
+			"  border-right: 1px solid black;\n"\
+			"}\n\n"\
+			".banner {\n"\
+			"  position: absolute;\n"\
+			"  top: 50%;\n"\
+			"  left: -20px;\n"\
+			"  width: 100%;\n"\
+			"  height: 40px;\n"\
+			"  line-height: 40px;\n"\
+			"  font-size: 16px;\n"\
+			"  color: white;\n"\
+			"  background: crimson;\n"\
+			"  box-shadow: 0 2px 4px rgba(0,0,0,0.4);\n"\
+			"}\n\n"\
+			".banner:after {\n"\
+			"  content: '';\n"\
+			"  position: absolute;\n"\
+			"  top: 40px;\n"\
+			"  left: 0;\n"\
+			"  width: 0;\n"\
+			"  height: 0;\n"\
+			"  border: 10px solid transparent;\n"\
+			"  border-top-color: #78091F;\n"\
+			"  border-right-color: #78091F;\n"\
+			"}"

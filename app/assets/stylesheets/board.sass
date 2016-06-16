@@ -1,0 +1,65 @@
+$board-height: 400px
+$board-title-width: 40px
+
+.board
+	width: $board-height * 2 + $board-title-width
+	height: $board-height
+	border: 1px solid black
+	margin: 0 auto
+
+	.title
+		width: $board-title-width
+		height: 100%
+		line-height: $board-title-width
+		background: black
+		display: inline-block
+		float: left
+		writing-mode: vertical-rl
+		-webkit-writing-mode: vertical-rl
+		transform: rotate(180deg)
+		color: white
+		font-size: 1.6em
+		letter-spacing: 4px
+		text-transform: uppercase
+
+	.area
+		position: relative
+		width: calc(50% - #{$board-title-width})
+		height: 100%
+		display: flex
+		float: left
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		background: white
+		overflow: hidden
+
+		.shape
+			display: inline-block
+			transition: 0.4s
+
+		.hint
+			position: absolute
+			left: 0
+			bottom: 0
+			width: 100%
+			font-size: 1.3em
+			font-style: italic
+			padding: 5px 10px
+			text-align: left
+
+	.code
+		position: relative
+		width: 50%
+		height: 100%
+		display: inline-block
+		float: left
+		box-sizing: border-box
+		padding: 10px
+		resize: none
+		font-size: 1.6em
+		font-family: monospace
+		border: 0
+		outline: 0
+		border-left: 1px solid black
+		white-space: pre

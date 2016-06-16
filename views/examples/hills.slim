@@ -1,0 +1,43 @@
+- @name = "hills"
+
+- @bg_colour = '#91E0FA'
+
+- @elements = "<div class='hill-1'></div><div class='hill-2'></div><div class='hill-3'></div>"
+
+- @styles = ".hill-1, .hill-2, .hill-3 {\n"\
+			"  position: absolute;\n"\
+			"  bottom: 0;\n"\
+			" }\n\n"\
+			".hill-1 {\n"\
+			"  width: 200px;\n"\
+			"  height: 100px;\n"\
+			"  border-radius: 100px 100px 0 0;\n"\
+			"  background: #A1D490;\n"\
+			"  z-index: 2;\n"\
+			"}\n\n"\
+			".hill-2 {\n"\
+			"  width: 300px;\n"\
+			"  height: 150px;\n"\
+			"  border-radius: 150px 150px 0 0;\n"\
+			"  background: #709465;\n"\
+			"  margin-left: 100px;\n"\
+			"  z-index: 1;\n"\
+			"}\n\n"\
+			".hill-3 {\n"\
+			"  width: 150px;\n"\
+			"  height: 75px;\n"\
+			"  border-radius: 75px 75px 0 0;\n"\
+			"  background: #87BD75;\n"\
+			"  margin-left: 150px;\n"\
+			"  bottom: -20px;\n"\
+			"  z-index: 3;\n"\
+			"}\n\n"\
+			".hills-container:hover .hill-1 {\n"\
+			"  background: pink;\n"\
+			" }\n\n"\
+			".hills-container:hover .hill-2 {\n"\
+			"  background: #54290A;\n"\
+			" }\n\n"\
+			".hills-container:hover .hill-3 {\n"\
+			"  background: white;\n"\
+			" }"
