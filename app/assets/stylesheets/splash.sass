@@ -1,0 +1,40 @@
+$base-transform: translateX(-50%) translateY(-80%) rotate(-8deg) scale(1)
+$base-name-transform: translateX(0)
+
+.wow
+	font-family: Pacifico
+	font-size: 10em
+	color: white
+	text-shadow: 4px 4px 0px crimson
+	-webkit-text-stroke: 2px black
+	letter-spacing: 4px
+	animation-name: entrance
+	animation-duration: 2s
+	position: absolute
+	top: 50%
+	transform: $base-transform
+
+.name
+	font-size: 3em
+	letter-spacing: 4px
+	animation-name: slideIn
+	animation-duration: 0.5s
+	animation-delay: 2s
+	animation-fill-mode: forwards
+	position: absolute
+	top: 60%
+	transform: $base-name-transform
+	visibility: hidden
+
+@keyframes entrance
+	0%
+		transform: translateX(300px) translateY(-80%) rotate(-720deg) scale(0.05)
+	100%
+		transform: $base-transform
+
+@keyframes slideIn
+	0%
+		transform: translateX(1000px)
+	100%
+		transform: $base-name-transform
+		visibility: visible
