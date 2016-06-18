@@ -1,0 +1,54 @@
+- @name = "rotate"
+
+- @bg_colour = "white url('/deck.jpg') center/cover"
+
+- @elements = 	"<div class='ship-pole'></div>"\
+				"<div class='animate-wheel'>"\
+				"	<div class='spoke'></div>"\
+				"	<div class='spoke two'></div>"\
+				"	<div class='spoke three'></div>"\
+				"	<div class='spoke four'></div>"\
+				"</div>"
+
+- @styles = ".animate-wheel {\n"\
+			"  position: relative;\n"\
+			"  width: 200px;\n"\
+			"  height: 200px;\n"\
+			"  border-radius: 50%;\n"\
+			"  border: 15px solid #2E1915;\n"\
+			"  animation-name: wheeee;\n"\
+			"  animation-duration: 4s;\n"\
+			"  animation-iteration-count: infinite;\n"\
+			"  animation-timing-function: linear;\n"\
+			"  box-shadow: 0 0 6px rgba(0,0,0,0.6);\n"\
+			"}\n\n"\
+			"@keyframes wheeee {\n"\
+			"  from { transform: rotate(0); }\n"\
+			"  to { transform: rotate(???); }\n"\
+			"}\n\n"\
+			".spoke {\n"\
+			"  position: absolute;\n"\
+			"  width: 10px;\n"\
+			"  height: calc(100% + 50px);\n"\
+			"  top: -25px;\n"\
+			"  left: calc(50% - 5px);\n"\
+			"  background: #4C2B21;\n"\
+			"}\n\n"\
+			".spoke.two {\n"\
+			"  transform: rotate(90deg);\n"\
+			"}\n\n"\
+			".spoke.three {\n"\
+			"  transform: rotate(45deg);\n"\
+			"}\n\n"\
+			".spoke.four {\n"\
+			"  transform: rotate(-45deg);\n"\
+			"}\n\n"\
+			".ship-pole {\n"\
+			"  position: absolute;\n"\
+			"  width: 60px;\n"\
+			"  height: 100%;\n"\
+			"  top: calc(50% - 50px);\n"\
+			"  left: calc(50% - 30px);\n"\
+			"  background: linear-gradient(to right, #7C5835, #66442C);\n"\
+			"  border-radius: 30px 30px 0 0;\n"\
+			"}"

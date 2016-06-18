@@ -1,0 +1,22 @@
+- @name = "scale"
+
+- @bg_colour = "white url('https://farm3.staticflickr.com/2555/3803920524_076e1c1b36_o.jpg') center/cover"
+
+- @elements = 	"<div class='animate-siren'></div>"
+
+- @styles = ".animate-siren {\n"\
+			"  width: 200px;\n"\
+			"  height: 200px;\n"\
+			"  border-radius: 50%;\n"\
+			"  background: radial-gradient(#DC143C, #781125);\n"\
+			"  animation-name: throb;\n"\
+			"  animation-duration: 2.5s;\n"\
+			"  animation-iteration-count: infinite;\n"\
+			"  animation-timing-function: ease;\n"\
+			"  box-shadow: 6px 3px 25px rgba(0,0,0,0.4);\n"\
+			"}\n\n"\
+			"@keyframes throb {\n"\
+			"  0% {transform: scale(1); }\n"\
+			"  50% { transform: scale(???); }\n"\
+			"  100% {transform: scale(1); }\n"\
+			"}"

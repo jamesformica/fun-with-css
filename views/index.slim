@@ -1,6 +1,7 @@
 div id="fullpage"
 
 	div class="section"
+
 		div class="slide"
 			== slim :splash, layout: false
 
@@ -45,6 +46,15 @@ div id="fullpage"
 
 		div class="slide"
 			== slim :"examples/banner", layout: :board_layout
+
+		div class="slide"
+			h1 Animations (using @keyframes)
+
+		div class="slide"
+			== slim :"animations/scale", layout: :board_layout
+
+		div class="slide"
+			== slim :"animations/rotate", layout: :board_layout
 
 		div class="slide"
 			h1 Derpy Examples (the best)
