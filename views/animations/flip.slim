@@ -1,0 +1,86 @@
+- @name = "flip"
+
+- @bg_colour = "white url('/gym.png') center/cover"
+
+- @elements = 	"<div class='gym-bar'></div>"\
+				"<div class='gymnast'>"\
+				"	<div class='gym-head'></div>"\
+				"	<div class='gym-body'></div>"\
+				"	<div class='gym-arm one'></div>"\
+				"	<div class='gym-arm two'></div>"\
+				"	<div class='gym-leg one'></div>"\
+				"	<div class='gym-leg two'></div>"\
+				"</div>"
+
+- @styles = ".gymnast {\n"\
+			"  position: absolute;\n"\
+			"  top: 40%;\n"\
+			"  left: calc(50% - 45px);\n"\
+			"  width: 90px;\n"\
+			"  animation-name: flip;\n"\
+			"  animation-duration: 2s;\n"\
+			"  animation-iteration-count: infinite;\n"\
+			"  animation-timing-function: ease-in;\n"\
+			"}\n\n"\
+			"@keyframes flip {\n"\
+			"  from { transform: rotateX(0); }\n"\
+			"  to { transform: rotateX(???); }\n"\
+			"}\n\n"\
+			".gym-head {\n"\
+			"  position: absolute;\n"\
+			"  top: calc(40% + 20px);\n"\
+			"  left: calc(50% - 30px);\n"\
+			"  width: 60px;\n"\
+			"  height: 60px;\n"\
+			"  background: radial-gradient(#CFBE9B, #AC9F81);\n"\
+			"  border-radius: 50%;\n"\
+			"  box-shadow: 2px 2px 4px rgba(0,0,0,0.4);\n"\
+			"}\n\n"\
+			".gym-body {\n"\
+			"  position: absolute;\n"\
+			"  top: calc(40% + 20px + 60px);\n"\
+			"  left: calc(50% - 30px);\n"\
+			"  width: 60px;\n"\
+			"  height: 80px;\n"\
+			"  background: linear-gradient(to right, #3865FF, #1C3383);\n"\
+			"  border-radius: 3px;\n"\
+			"  box-shadow: 2px 2px 4px rgba(0,0,0,0.4);\n"\
+			"}\n\n"\
+			".gym-arm {\n"\
+			"  position: absolute;\n"\
+			"  top: 40%;\n"\
+			"  width: 15px;\n"\
+			"  height: 90px;\n"\
+			"  background: linear-gradient(to right, #CFBE9B, #AC9F81);\n"\
+			"  border-radius: 3px;\n"\
+			"  box-shadow: 2px 2px 4px rgba(0,0,0,0.4);\n"\
+			"}\n\n"\
+			".gym-arm.one {\n"\
+			"  left: 0;\n"\
+			"}\n\n"\
+			".gym-arm.two {\n"\
+			"  right: 0;\n"\
+			"}\n\n"\
+			".gym-leg {\n"\
+			"  position: absolute;\n"\
+			"  top: calc(40% + 20px + 60px + 80px);\n"\
+			"  width: 15px;\n"\
+			"  height: 70px;\n"\
+			"  background: linear-gradient(to right, #CFBE9B, #AC9F81);\n"\
+			"  border-radius: 3px;\n"\
+			"  box-shadow: 2px 2px 4px rgba(0,0,0,0.4);\n"\
+			"}\n\n"\
+			".gym-leg.one {\n"\
+			"  left: 15px;\n"\
+			"}\n\n"\
+			".gym-leg.two {\n"\
+			"  right: 15px;\n"\
+			"}\n\n"\
+			".gym-bar {\n"\
+			"  position: absolute;\n"\
+			"  top: 40%;\n"\
+			"  left: 0;\n"\
+			"  width: 100%;\n"\
+			"  height: 10px;\n"\
+			"  background: linear-gradient(#0DAFEE, #066489);\n"\
+			"}"
