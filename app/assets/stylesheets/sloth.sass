@@ -1,0 +1,74 @@
+$sloth-head-width: 400px
+
+.sloth-head
+	position: absolute
+	bottom: 70px
+	left: 100px
+	width: $sloth-head-width
+	height: 250px
+	border-radius: 150px 150px 0 0
+	background: #A6855A
+
+	.sloth-face
+		position: absolute
+		top: 20px
+		left: 20px
+		width: calc(100% - 40px)
+		height: calc(100% - 40px)
+		background: #E8BA7E
+		border-radius: 50%
+
+		.sloth-eye-container
+			position: absolute
+			top: -40px
+			width: 70px
+			height: 150px
+			border-radius: 40px 40px 0 0
+			background: #A6855A
+
+			&.one
+				left: -10px
+				transform: rotate(60deg)
+				transform-origin: 0 100%
+
+			&.two
+				right: -10px
+				transform: rotate(-60deg)
+				transform-origin: 100% 100%
+
+			.sloth-eye
+				position: absolute
+				top: 30%
+				left: calc(50% - 25px)
+				width: 50px
+				height: 50px
+				background: black
+				border-radius: 50%
+
+				&:after
+					content: ""
+					position: absolute
+					top: calc(50% - 10px)
+					left: calc(50% - 7.5px)
+					width: 15px
+					height: 20px
+					background: white
+					border-radius: 50%
+		
+		.sloth-nose
+			position: absolute
+			width: 50px
+			height: 40px
+			top: 50%
+			left: calc(50% - 20px)
+			background: black
+			border-radius: 15px 15px 25px 25px
+
+		.sloth-mouth
+			position: absolute
+			bottom: 20px
+			left: calc(50% - 60px)
+			width: 120px
+			height: 40px
+			border-radius: 50%
+			border-bottom: 6px solid black
