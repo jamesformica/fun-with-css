@@ -1,6 +1,6 @@
 $sloth-head-width: 400px
-$sloth-head-colour: #A6855A
-$sloth-face-colour: #E8BA7E
+$sloth-head-colour: #C19B83
+$sloth-face-colour: #EBCDB9
 
 .sloth-head
 	position: absolute
@@ -19,6 +19,8 @@ $sloth-face-colour: #E8BA7E
 		height: calc(100% - 40px)
 		background: $sloth-face-colour
 		border-radius: 50%
+		overflow: hidden
+		-webkit-transform: rotate(0.000001deg) // fixed chrome issue of overflow:hidden not working with boder-radius
 
 		.sloth-eye-container
 			position: absolute
@@ -26,7 +28,7 @@ $sloth-face-colour: #E8BA7E
 			width: 70px
 			height: 150px
 			border-radius: 40px 40px 0 0
-			background: $sloth-head-colour
+			background: #744C33
 
 			&.one
 				left: -10px
