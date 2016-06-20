@@ -3,9 +3,6 @@ div id="fullpage"
 	div class="section"
 
 		div class="slide"
-			== slim :questions, layout: false
-
-		div class="slide"
 			== slim :splash, layout: false
 
 		div class="slide"
@@ -76,6 +73,9 @@ div id="fullpage"
 
 		div class="slide"
 			== slim :info, locals: {content: "The Bureau of Statistics released a report which showed that there is exactly a 100% defecit of Flamingos in PortalX."}
+
+		div class="slide"
+			== slim :questions, layout: false
 
 javascript:
 	$(document).ready(function() {
