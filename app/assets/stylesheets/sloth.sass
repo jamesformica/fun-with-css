@@ -1,4 +1,6 @@
 $sloth-head-width: 400px
+$sloth-head-colour: #A6855A
+$sloth-face-colour: #E8BA7E
 
 .sloth-head
 	position: absolute
@@ -6,7 +8,7 @@ $sloth-head-width: 400px
 	width: $sloth-head-width
 	height: 250px
 	border-radius: 150px 150px 0 0
-	background: #A6855A
+	background: $sloth-head-colour
 	margin-left: 50px
 
 	.sloth-face
@@ -15,7 +17,7 @@ $sloth-head-width: 400px
 		left: 20px
 		width: calc(100% - 40px)
 		height: calc(100% - 40px)
-		background: #E8BA7E
+		background: $sloth-face-colour
 		border-radius: 50%
 
 		.sloth-eye-container
@@ -24,7 +26,7 @@ $sloth-head-width: 400px
 			width: 70px
 			height: 150px
 			border-radius: 40px 40px 0 0
-			background: #A6855A
+			background: $sloth-head-colour
 
 			&.one
 				left: -10px
