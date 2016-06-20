@@ -2,7 +2,7 @@
 
 - @bg_colour = 'white'
 
-- @elements = "<div class='page'><div class='banner'>This looks cool!</div></div>"
+- @elements = "<div class='page'><div class='banner'>I AM A BANNER!</div></div>"
 
 - @styles = ".page {\n"\
 			"  position: absolute;\n"\
@@ -23,7 +23,7 @@
 			"  line-height: 40px;\n"\
 			"  font-size: 16px;\n"\
 			"  color: white;\n"\
-			"  background: crimson;\n"\
+			"  background: #DC143C;\n"\
 			"  box-shadow: 0 2px 4px rgba(0,0,0,0.4);\n"\
 			"}\n\n"\
 			".banner:after {\n"\
@@ -36,4 +36,30 @@
 			"  border: 10px solid transparent;\n"\
 			"  border-top-color: #78091F;\n"\
 			"  border-right-color: #78091F;\n"\
+			"}\n\n"\
+			".banner-container:hover .banner {\n"\
+			"  animation-name: cycle;\n"\
+			"  animation-duration: 1.5s;\n"\
+			"  animation-iteration-count: infinite;\n"\
+			"  animation-timing-function: linear;\n"\
+			"}\n\n"\
+			".banner-container:hover .banner:after {\n"\
+			"  animation-name: cycle-darker;\n"\
+			"  animation-duration: 1.5s;\n"\
+			"  animation-iteration-count: infinite;\n"\
+			"  animation-timing-function: linear;\n"\
+			"}\n\n"\
+			"@keyframes cycle {\n"\
+			"  0% { background: #DC143C; }\n"\
+			"  25% { background: #3B54D8; }\n"\
+			"  50% { background: #84E87F; }\n"\
+			"  75% { background: #FFF144; }\n"\
+			"  100% { background: #DC143C; }\n"\
+			"}\n\n"\
+			"@keyframes cycle-darker {\n"\
+			"  0% { border-top-color: #78091F; border-right-color: #78091F; }\n"\
+			"  25% { border-top-color: #1D2A70; border-right-color: #1D2A70; }\n"\
+			"  50% { border-top-color: #3B6A3A; border-right-color: #3B6A3A; }\n"\
+			"  75% { border-top-color: #6C661B; border-right-color: #6C661B; }\n"\
+			"  100% { border-top-color: #78091F; border-right-color: #78091F; }\n"\
 			"}"
