@@ -15,13 +15,10 @@ div id="fullpage"
 			== slim :board, locals: {name: "circle"}, layout: false
 
 		div class="slide"
-			== slim :info, locals: {content: "I have a scar on my chin from going too fast down a slip 'n' slide and flying off at the end and hitting into a suspiciously placed log."}
+			== slim :info, locals: {content: "I have a scar on my chin from going too fast down a slip 'n' slide, flying off at the end, and hitting into a suspiciously placed log."}
 
 		div class="slide"
 			== slim :board, locals: {name: "semi-circle", hint: "the height must be half the width"}, layout: false
-
-		div class="slide"
-			== slim :info, locals: {content: "I once collided my mouth with Anastasia's whilst kissing her. Half of my front tooth snapped off and landed in her mouth."}
 
 		div class="slide"
 			== slim :board, locals: {name: "triangle", hint: "it has to do with big borders"}, layout: false
@@ -33,16 +30,14 @@ div id="fullpage"
 			== slim :"examples/card", layout: :board_layout
 
 		div class="slide"
-			== slim :info, locals: {content: "I have a younger brother Mitchell. He is born EXACTLY 2 years after me. We mostly get along, but I've never quite been able to figure out why I have a subtle disliking for him..."}
+			== slim :info, locals: {content: "I once collided my mouth with Anastasia's whilst kissing her. Half of my front tooth snapped off and fell into her mouth."}
 
 		div class="slide"
 			== slim :"examples/badge", layout: :board_layout
 
 		div class="slide"
 			== slim :"examples/hills", layout: :board_layout
-
-		div class="slide"
-			== slim :info, locals: {content: "My full name is James Liam Formica. An anagram of my name is: \"Mommies Facial Jar\" <br/><br/>I'm not sure what you should do with that information, but there you go."}
+		
 
 		div class="slide"
 			== slim :"examples/banner", layout: :board_layout
@@ -57,6 +52,9 @@ div id="fullpage"
 			== slim :"animations/rotate", layout: :board_layout, locals: {prompt: "* Loading Spinner"}
 
 		div class="slide"
+			== slim :info, locals: {content: "I have a younger brother Mitchell. He is born EXACTLY 2 years after me. We mostly get along, but I've never quite been able to figure out why I have a subtle disliking for him..."}
+
+		div class="slide"
 			== slim :"animations/flip", layout: :board_layout
 
 		div class="slide"
@@ -64,6 +62,9 @@ div id="fullpage"
 
 		div class="slide"
 			== slim :"examples/cat", layout: :board_layout
+
+		div class="slide"
+			== slim :info, locals: {content: "My full name is James Liam Formica. An anagram of my name is: \"Mommies Facial Jar\" <br/><br/>I'm not sure what you should do with that information, but there you go."}
 
 		div class="slide"
 			== slim :"examples/turtle", layout: :board_layout
