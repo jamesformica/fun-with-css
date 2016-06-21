@@ -1,0 +1,30 @@
+- @name = "orbit"
+
+- @bg_colour = "white url('/images/stars.gif') center"
+
+- @elements = 	"<img class='orbit-cow' src='/images/cow.png' alt='mooooo' />"\
+				"<img class='orbit-moon' src='/images/cartoon-moon.png' alt='moooooon' />"
+
+- @styles = ".orbit-cow {\n"\
+			"  height: 80px;\n"\
+			"  animation-name: orbit;\n"\
+			"  animation-duration: 2.5s;\n"\
+			"  animation-iteration-count: infinite;\n"\
+			"  animation-timing-function: linear;\n"\
+			"}\n\n"\
+			".orbit-moon {\n"\
+			"  height: 80px;\n"\
+			"  margin-top: -75px;\n"\
+			"  animation-name: slow-spin;\n"\
+			"  animation-duration: 20s;\n"\
+			"  animation-iteration-count: infinite;\n"\
+			"  animation-timing-function: linear;\n"\
+			"}\n\n"\
+			"@keyframes orbit {\n"\
+			"  from {transform: rotate(0deg) translateX(120px); }\n"\
+			"  to {transform: rotate(360deg) translateX(120px); }\n"\
+			"}\n\n"\
+			"@keyframes slow-spin {\n"\
+			"  from {transform: rotate(0deg); }\n"\
+			"  to {transform: rotate(-360deg); }\n"\
+			"}"
