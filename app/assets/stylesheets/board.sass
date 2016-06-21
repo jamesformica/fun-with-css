@@ -2,6 +2,7 @@ $board-height: 400px
 $board-title-width: 40px
 
 .board
+	position: relative
 	width: $board-height * 2 + $board-title-width
 	height: $board-height
 	border: 1px solid black
@@ -63,3 +64,11 @@ $board-title-width: 40px
 		outline: 0
 		border-left: 1px solid black
 		white-space: pre
+
+	.prompt
+		position: absolute
+		bottom: -30px
+		right: 0
+		height: 30px
+		font-size: 1.2em
+		line-height: 30px

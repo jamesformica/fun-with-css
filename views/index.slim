@@ -12,10 +12,10 @@ div id="fullpage"
 			== slim :board, locals: {name: "square"}, layout: false
 
 		div class="slide"
-			== slim :info, locals: {content: "I have a scar on my chin from going too fast down a slip 'n' slide and flying off at the end and hitting into a suspiciously placed log."}
+			== slim :board, locals: {name: "circle"}, layout: false
 
 		div class="slide"
-			== slim :board, locals: {name: "circle"}, layout: false
+			== slim :info, locals: {content: "I have a scar on my chin from going too fast down a slip 'n' slide and flying off at the end and hitting into a suspiciously placed log."}
 
 		div class="slide"
 			== slim :board, locals: {name: "semi-circle", hint: "the height must be half the width"}, layout: false
@@ -51,10 +51,10 @@ div id="fullpage"
 			h1 Animations (using @keyframes)
 
 		div class="slide"
-			== slim :"animations/scale", layout: :board_layout
+			== slim :"animations/scale", layout: :board_layout, locals: {prompt: "* Netflix Library"}
 
 		div class="slide"
-			== slim :"animations/rotate", layout: :board_layout
+			== slim :"animations/rotate", layout: :board_layout, locals: {prompt: "* Loading Spinner"}
 
 		div class="slide"
 			== slim :"animations/flip", layout: :board_layout
