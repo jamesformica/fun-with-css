@@ -3,25 +3,27 @@ div id="fullpage"
 	div class="section"
 
 		div class="slide"
+			== slim :board, locals: {name: "square", solution: ShapeHelper.square_solution}, layout: false
+
+		div class="slide"
 			== slim :splash, layout: false
 
 		div class="slide"
 			h1 Basic Shapes
 
-		div class="slide"
-			== slim :board, locals: {name: "square"}, layout: false
+		
 
 		div class="slide"
-			== slim :board, locals: {name: "circle"}, layout: false
+			== slim :board, locals: {name: "circle", solution: ShapeHelper.circle_solution}, layout: false
 
 		div class="slide"
 			== slim :info, locals: {content: "I have a scar on my chin from going too fast down a slip 'n' slide, flying off at the end, and hitting into a suspiciously placed log."}
 
 		div class="slide"
-			== slim :board, locals: {name: "semi-circle", hint: "the height must be half the width"}, layout: false
+			== slim :board, locals: {name: "semi-circle", hint: "the height must be half the width", solution: ShapeHelper.semi_circle_solution}, layout: false
 
 		div class="slide"
-			== slim :board, locals: {name: "triangle", hint: "it has to do with big borders"}, layout: false
+			== slim :board, locals: {name: "triangle", hint: "it has to do with big borders", solution: ShapeHelper.triangle_solution}, layout: false
 
 		div class="slide"
 			h1 "Real World" Examples
@@ -84,11 +86,13 @@ div id="fullpage"
 javascript:
 	$(document).ready(function() {
 
+		// initialising fullpage js
 		$("#fullpage").fullpage({
 			controlArrows: false,
 			slidesNavigation: true
 		});
 
+		// typing in code
 		var $code = $(".ui-code");
 
 		$code.on("keyup", function(e) {
@@ -108,6 +112,21 @@ javascript:
 			var $style = $board.children("style");
 
 			$style.html($curCode.val());
+		});
+
+		// showing the solution
+		var $solution = $(".ui-solution");
+
+		$solution.click(function(e) {
+			var $curSolution = $(e.currentTarget);
+
+			var solution = $curSolution.attr("solution");
+
+			var $board = $curSolution.closest(".ui-board");
+			var $code = $board.children(".ui-code");
+
+			$code.val(solution);
+			$code.trigger("keyup");
 		});
 	});
 

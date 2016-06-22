@@ -9,6 +9,11 @@ div class="board ui-board"
 
 		div class="hint"
 			= "Clue: #{hint}..." unless !defined? hint
+
+		- if defined? solution
+			span class="solution ui-solution" solution="#{solution}"
+				| Show Solution
+
 	textarea class="code ui-code"
 		= ".#{name} {\n"
 		= "  background: #{colour};\n"

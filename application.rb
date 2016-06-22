@@ -5,6 +5,8 @@ require 'sinatra/base'
 require 'sass'
 require 'slim'
 
+require_relative 'helpers/shape_helper'
+
 class App < Sinatra::Base
 
 	set :root, File.dirname(__FILE__)
@@ -14,6 +16,8 @@ class App < Sinatra::Base
 	set :assets_precompile, %w(application.css *.png *.jpg *.svg *.eot *.ttf *.woff)
 
 	set :assets_css_compressor, :sass
+
+	helpers ShapeHelper
 
 	register Sinatra::AssetPipeline
 	
