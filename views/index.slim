@@ -125,6 +125,9 @@ javascript:
 			var $board = $curSolution.closest(".ui-board");
 			var $code = $board.children(".ui-code");
 
+			var colour = $board.attr("colour");
+			solution = solution.replace(/{background}/g, colour);
+
 			$code.val(solution);
 			$code.trigger("keyup");
 		});
