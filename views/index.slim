@@ -3,15 +3,13 @@ div id="fullpage"
 	div class="section"
 
 		div class="slide"
-			== slim :board, locals: {name: "square", solution: ShapeHelper.square_solution}, layout: false
-
-		div class="slide"
 			== slim :splash, layout: false
 
 		div class="slide"
 			h1 Basic Shapes
 
-		
+		div class="slide"
+			== slim :board, locals: {name: "square", solution: ShapeHelper.square_solution}, layout: false
 
 		div class="slide"
 			== slim :board, locals: {name: "circle", solution: ShapeHelper.circle_solution}, layout: false
@@ -92,32 +90,32 @@ javascript:
 			slidesNavigation: true
 		});
 
-		// typing in code
-		var $code = $(".ui-code");
+		$(".ui-code").on("input propertychange", SomeoneEnteredSomething);
+		$(".ui-solution").on("click", SomeoneGaveUpOrWantsToSeeTheAnswer);
 
-		$code.on("keyup", function(e) {
+		function SomeoneEnteredSomething(e) {
 			var $curCode = $(e.currentTarget);
 
 			if (e.keyCode === 13) {
-				var cursorPos = $curCode.get(0).selectionStart;
+				var curCodeHtml = $curCode.get(0);
+
+				var cursorPos = curCodeHtml.selectionStart;
 				var textAreaTxt = $curCode.val();
 				var indentedText = textAreaTxt.substring(0, cursorPos) + "  " + textAreaTxt.substring(cursorPos);
-				var newCursorPos = cursorPos + 2;
-
+				
 				$curCode.val(indentedText);
-				$curCode.get(0).setSelectionRange(newCursorPos, newCursorPos);
+
+				var newCursorPos = cursorPos + 2;
+				curCodeHtml.setSelectionRange(newCursorPos, newCursorPos);
 			}
 			
 			var $board = $curCode.closest(".ui-board");
 			var $style = $board.children("style");
 
 			$style.html($curCode.val());
-		});
+		}
 
-		// showing the solution
-		var $solution = $(".ui-solution");
-
-		$solution.click(function(e) {
+		function SomeoneGaveUpOrWantsToSeeTheAnswer(e) {
 			var $curSolution = $(e.currentTarget);
 
 			var solution = $curSolution.attr("solution");
@@ -129,7 +127,7 @@ javascript:
 			solution = solution.replace(/{background}/g, colour);
 
 			$code.val(solution);
-			$code.trigger("keyup");
-		});
+			$code.trigger("input");
+		}
 	});
 
