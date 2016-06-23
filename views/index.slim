@@ -90,13 +90,21 @@ javascript:
 			slidesNavigation: true
 		});
 
+		$(".ui-code").on("keyup", SomeonePressedEnter);
 		$(".ui-code").on("input propertychange", SomeoneEnteredSomething);
 		$(".ui-solution").on("click", SomeoneGaveUpOrWantsToSeeTheAnswer);
 
 		function SomeoneEnteredSomething(e) {
 			var $curCode = $(e.currentTarget);
+			var $board = $curCode.closest(".ui-board");
+			var $style = $board.children("style");
 
+			$style.html($curCode.val());
+		}
+
+		function SomeonePressedEnter(e) {
 			if (e.keyCode === 13) {
+				var $curCode = $(e.currentTarget);
 				var curCodeHtml = $curCode.get(0);
 
 				var cursorPos = curCodeHtml.selectionStart;
@@ -108,11 +116,6 @@ javascript:
 				var newCursorPos = cursorPos + 2;
 				curCodeHtml.setSelectionRange(newCursorPos, newCursorPos);
 			}
-			
-			var $board = $curCode.closest(".ui-board");
-			var $style = $board.children("style");
-
-			$style.html($curCode.val());
 		}
 
 		function SomeoneGaveUpOrWantsToSeeTheAnswer(e) {
