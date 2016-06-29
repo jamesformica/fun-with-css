@@ -14,6 +14,12 @@ $bubble-shadow: 2px 2px 4px rgba(0,0,0,0.4)
 	background: $sloth-head-colour
 	margin-left: 50px
 
+	&:hover
+		.sloth-eye
+			overflow: hidden
+			animation-name: wink
+			animation-duration: 10s
+
 	.bubble
 		position: absolute
 		top: -200px
@@ -111,3 +117,9 @@ $bubble-shadow: 2px 2px 4px rgba(0,0,0,0.4)
 			height: 40px
 			border-radius: 50%
 			border-bottom: 6px solid black
+
+@keyframes wink
+	0%
+		width: 50px
+	100%
+		width: 3px

@@ -3,9 +3,6 @@ div id="fullpage"
 	div class="section"
 
 		div class="slide"
-			== slim :"animations/library", layout: :board_layout
-
-		div class="slide"
 			== slim :splash, layout: false
 
 		div class="slide"
@@ -50,6 +47,9 @@ div id="fullpage"
 
 		div class="slide"
 			== slim :"animations/scale", layout: :board_layout, locals: {prompt: "* Netflix Library"}
+
+		div class="slide"
+			== slim :"animations/library", layout: :board_layout
 
 		div class="slide"
 			== slim :"animations/rotate", layout: :board_layout, locals: {prompt: "* Loading Spinner"}
