@@ -3,6 +3,9 @@ div id="fullpage"
 	div class="section"
 
 		div class="slide"
+			== slim :"animations/library", layout: :board_layout
+
+		div class="slide"
 			== slim :splash, layout: false
 
 		div class="slide"
@@ -50,6 +53,9 @@ div id="fullpage"
 
 		div class="slide"
 			== slim :"animations/rotate", layout: :board_layout, locals: {prompt: "* Loading Spinner"}
+
+		div class="slide"
+			== slim :"animations/loader", layout: :board_layout
 
 		div class="slide"
 			== slim :info, locals: {content: "I have a younger brother Mitchell. He is born EXACTLY 2 years after me. We mostly get along, but I've never quite been able to figure out why I have a subtle disliking for him..."}

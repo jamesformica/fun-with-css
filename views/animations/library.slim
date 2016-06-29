@@ -1,0 +1,33 @@
+- @name = "library"
+
+- @bg_colour = "white"
+
+- @elements = 	"<div class='lib-item one'></div>"\
+				"<div class='lib-item two'></div>"\
+				"<div class='lib-item three'></div>"
+
+- @styles = ".library-container {\n"\
+			"  flex-direction: row !important;\n"\
+			"}\n\n"\
+			".lib-item {\n"\
+			"  width: 30%;\n"\
+			"  height: 200px;\n"\
+			"  float: left;\n"\
+			"  border: 1px solid black;\n"\
+			"  margin: 0 1px;\n"\
+			"  transition: 0.2s;\n"\
+			"}\n\n"\
+			".lib-item.one {\n"\
+			"  background: red;\n"\
+			"}\n\n"\
+			".lib-item.two {\n"\
+			"  background: green;\n"\
+			"}\n\n"\
+			".lib-item.three {\n"\
+			"  background: blue;\n"\
+			"}\n\n"\
+			".lib-item:hover {\n"\
+			"  transition: 0.4s;\n"\
+			"  transform: scale(1.2);\n"\
+			"  z-index: 10;\n"\
+			"}"
